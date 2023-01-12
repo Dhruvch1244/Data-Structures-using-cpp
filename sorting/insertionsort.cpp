@@ -11,8 +11,8 @@ int main(){
             }
         }
     }
-    for(int k = 0;k<arr.size();k++){
-        cout<<arr[k]<<" ";
+    for(auto k : arr){
+        cout<<k<<" ";
     }
     return 0;
 }
