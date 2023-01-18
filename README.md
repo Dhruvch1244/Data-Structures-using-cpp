@@ -5,3 +5,5 @@
 - Searching - Linear, Binary.
 
 - Sorting - Bubble, Insertion, Merge, Selection 
+
+- linked list
