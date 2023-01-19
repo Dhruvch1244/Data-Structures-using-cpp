@@ -6,4 +6,4 @@
 
 - Sorting - Bubble, Insertion, Merge, Selection 
 
-- linked list
+- linked list - creation
