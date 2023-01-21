@@ -7,3 +7,5 @@
 - Sorting - Bubble, Insertion, Merge, Selection 
 
 - linked list - creation
+
+- tree - bst creation
