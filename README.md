@@ -9,3 +9,7 @@
 - linked list - creation
 
 - tree - bst creation
+
+- stack 
+
+- queue
