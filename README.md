@@ -17,3 +17,10 @@
     Insertion Sort
     
     Selection Sort
+## Tree
+
+    Tree Traversal
+
+    Binary Search Tree
+
+    
