@@ -1,11 +1,19 @@
 # Data-Structures-using-cpp
 
-- All kinds of DSA Concepts code implementation
+## Divide and Conquere
 
-- Searching - Linear, Binary.
+    Merge Sort
 
-- Sorting - Bubble, Insertion, Merge, Selection 
+    Binary Search
 
-- linked list - creation
+    Finding Maximum and Minimum in array
 
-- tree - bst creation
+    Quick Sort
+    
+## Sorting
+
+    Bubble Sort
+
+    Insertion Sort
+    
+    Selection Sort
