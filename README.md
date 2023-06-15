@@ -23,4 +23,8 @@
 
     Binary Search Tree
 
-    
+    AVL Tree
+
+    BFS
+
+    DFS
