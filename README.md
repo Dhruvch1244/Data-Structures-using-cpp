@@ -28,3 +28,11 @@
     BFS
 
     DFS
+
+## Greedy Algorithm
+
+    Fractional Knapsack Problem
+
+    Dijkstra's Shortest Path Algorithm
+
+    Prim's Minimum Spanning Tree Algorithm
