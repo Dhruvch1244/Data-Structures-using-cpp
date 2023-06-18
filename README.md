@@ -39,4 +39,10 @@
 
 ## Dynamic Programming
 
-    
+    Fibonacci Series
+
+    Dijkstra's algorithm
+
+    Longest Common Subsequence (LCS)
+
+    Knapsack problem
