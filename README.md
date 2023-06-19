@@ -46,3 +46,13 @@
     Longest Common Subsequence (LCS)
 
     Knapsack problem
+
+## Backtracking
+
+    Hamilton Cycle
+
+    N queen
+
+    Permutation of all Strings
+
+    Subset Problem
