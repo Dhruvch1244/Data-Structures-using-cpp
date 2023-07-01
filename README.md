@@ -56,3 +56,21 @@
     Permutation of all Strings
 
     Subset Problem
+
+## Graphs
+
+    Bfs
+
+    Dfs
+
+    Dijkstra
+
+    Travelling Salesman Problem
+
+## LinkedList
+
+    Linkedlist creation deletion
+
+    Stack using LinkedList
+
+    Queue using LinkedList
