@@ -1,5 +1,17 @@
 # Data-Structures-using-cpp
 
+## Top Common question
+
+    Valid Parentheses(using stack)
+
+    Fizz Buzz
+
+    Palindrome
+
+    Two Sum
+
+    Reverse String
+
 ## Divide and Conquere
 
     Merge Sort
