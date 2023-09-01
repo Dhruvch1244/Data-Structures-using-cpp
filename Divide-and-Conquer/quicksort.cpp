@@ -3,9 +3,9 @@
 
 using namespace std;
 
-int partition(vector<int>& arr, int low, int high) {
+int partition(vector<int> &arr, int low, int high) {
     int pivot = arr[high];
-    int i = low - 1;
+    int i     = low - 1;
 
     for (int j = low; j <= high - 1; j++) {
         if (arr[j] < pivot) {
@@ -18,7 +18,7 @@ int partition(vector<int>& arr, int low, int high) {
     return i + 1;
 }
 
-void quicksort(vector<int>& arr, int low, int high) {
+void quicksort(vector<int> &arr, int low, int high) {
     if (low < high) {
         int pivotIndex = partition(arr, low, high);
 
@@ -27,7 +27,7 @@ void quicksort(vector<int>& arr, int low, int high) {
     }
 }
 
-void printArray(const vector<int>& arr) {
+void printArray(const vector<int> &arr) {
     for (int num : arr) {
         cout << num << " ";
     }
@@ -35,8 +35,8 @@ void printArray(const vector<int>& arr) {
 }
 
 int main() {
-    vector<int> arr = {9, 5, 1, 8, 3, 2, 7, 6, 4};
-    int size = arr.size();
+    vector<int> arr  = {9, 5, 1, 8, 3, 2, 7, 6, 4};
+    int         size = arr.size();
 
     cout << "Array before sorting: ";
     printArray(arr);

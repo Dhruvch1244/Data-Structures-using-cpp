@@ -4,18 +4,14 @@
 using namespace std;
 
 class Stack {
-private:
-    int top;                  
-    int arr[MAX_SIZE];        
+  private:
+    int top;
+    int arr[MAX_SIZE];
 
-public:
-    Stack() {
-        top = -1;             
-    }
+  public:
+    Stack() { top = -1; }
 
-    bool isEmpty() {
-        return top == -1;     
-    }
+    bool isEmpty() { return top == -1; }
 
     void push(int element) {
         // ...
@@ -24,12 +20,12 @@ public:
     int pop() {
         if (isEmpty()) {
             cout << "Stack Underflow!" << endl;
-            return -1;  
+            return -1;
         }
 
-        int poppedElement = arr[top]; 
-        top--;                      
-        return poppedElement;        
+        int poppedElement = arr[top];
+        top--;
+        return poppedElement;
     }
 };
 
@@ -49,7 +45,7 @@ int main() {
     int poppedElement3 = stack.pop();
     cout << "Popped element: " << poppedElement3 << endl;
 
-    int poppedElement4 = stack.pop();  
+    int poppedElement4 = stack.pop();
     cout << "Popped element: " << poppedElement4 << endl;
 
     return 0;

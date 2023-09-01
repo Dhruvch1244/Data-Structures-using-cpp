@@ -1,5 +1,5 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -12,7 +12,7 @@ int main() {
     numbers.push_back(4);
     push_heap(numbers.begin(), numbers.end());
 
-    for (const auto& num : numbers) {
+    for (const auto &num : numbers) {
         cout << num << " ";
     }
 

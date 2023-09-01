@@ -3,12 +3,10 @@
 
 using namespace std;
 
-bool isSafe(int v, vector<vector<int>>& graph, vector<int>& path, int pos) {
-
+bool isSafe(int v, vector<vector<int>> &graph, vector<int> &path, int pos) {
 
     if (graph[path[pos - 1]][v] == 0)
         return false;
-
 
     for (int i = 0; i < pos; i++)
         if (path[i] == v)
@@ -17,9 +15,9 @@ bool isSafe(int v, vector<vector<int>>& graph, vector<int>& path, int pos) {
     return true;
 }
 
-bool hamiltonianCycleUtil(vector<vector<int>>& graph, vector<int>& path, int pos) {
+bool hamiltonianCycleUtil(vector<vector<int>> &graph, vector<int> &path,
+                          int pos) {
     int V = graph.size();
-
 
     if (pos == V) {
 
@@ -29,14 +27,12 @@ bool hamiltonianCycleUtil(vector<vector<int>>& graph, vector<int>& path, int pos
             return false;
     }
 
-
     for (int v = 1; v < V; v++) {
         if (isSafe(v, graph, path, pos)) {
             path[pos] = v;
 
             if (hamiltonianCycleUtil(graph, path, pos + 1))
                 return true;
-
 
             path[pos] = -1;
         }
@@ -45,12 +41,10 @@ bool hamiltonianCycleUtil(vector<vector<int>>& graph, vector<int>& path, int pos
     return false;
 }
 
-void hamiltonianCycle(vector<vector<int>>& graph) {
+void hamiltonianCycle(vector<vector<int>> &graph) {
     int V = graph.size();
 
-    
     vector<int> path(V, -1);
-
 
     path[0] = 0;
 

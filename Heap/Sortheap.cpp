@@ -1,5 +1,5 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -10,7 +10,7 @@ int main() {
     make_heap(numbers.begin(), numbers.end());
     sort_heap(numbers.begin(), numbers.end());
 
-    for (const auto& num : numbers) {
+    for (const auto &num : numbers) {
         cout << num << " ";
     }
 

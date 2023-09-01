@@ -1,26 +1,22 @@
 #include <iostream>
 using namespace std;
 struct Node {
-    int data;
-    Node* next;
+    int   data;
+    Node *next;
 };
 
 struct Stack {
-    Node* top;
+    Node *top;
 
-    Stack() {
-        top = nullptr;
-    }
+    Stack() { top = nullptr; }
 
-    bool isEmpty() {
-        return top == nullptr;
-    }
+    bool isEmpty() { return top == nullptr; }
 
     void push(int data) {
-        Node* newNode = new Node;
+        Node *newNode = new Node;
         newNode->data = data;
         newNode->next = top;
-        top = newNode;
+        top           = newNode;
         cout << "Pushed element: " << data << endl;
     }
 
@@ -29,8 +25,8 @@ struct Stack {
             cout << "Stack is empty. Cannot perform pop operation." << endl;
             return;
         }
-        Node* temp = top;
-        top = top->next;
+        Node *temp = top;
+        top        = top->next;
         cout << "Popped element: " << temp->data << endl;
         delete temp;
     }
@@ -48,7 +44,7 @@ struct Stack {
             cout << "Stack is empty." << endl;
             return;
         }
-        Node* current = top;
+        Node *current = top;
         cout << "Stack elements: ";
         while (current != nullptr) {
             cout << current->data << " ";
@@ -64,12 +60,12 @@ int main() {
     stack.push(10);
     stack.push(20);
     stack.push(30);
-    stack.display();  
+    stack.display();
 
     stack.pop();
-    stack.display();  
+    stack.display();
 
-    cout << "Top element: " << stack.peek() << endl;  
+    cout << "Top element: " << stack.peek() << endl;
 
     return 0;
 }

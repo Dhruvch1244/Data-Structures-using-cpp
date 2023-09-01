@@ -3,18 +3,14 @@
 
 using namespace std;
 class Stack {
-private:
-    int top;                  
-    int arr[MAX_SIZE];        
+  private:
+    int top;
+    int arr[MAX_SIZE];
 
-public:
-    Stack() {
-        top = -1;             
-    }
+  public:
+    Stack() { top = -1; }
 
-    bool isEmpty() {
-        return top == -1;     
-    }
+    bool isEmpty() { return top == -1; }
 
     void push(int element) {
         // ...

@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -15,13 +15,13 @@ bool compare(Item item1, Item item2) {
     return ratio1 > ratio2;
 }
 
-double fractionalKnapsack(int capacity, vector<Item>& items) {
+double fractionalKnapsack(int capacity, vector<Item> &items) {
     sort(items.begin(), items.end(), compare);
 
-    double totalValue = 0.0;
-    int remainingCapacity = capacity;
+    double totalValue        = 0.0;
+    int    remainingCapacity = capacity;
 
-    for (const auto& item : items) {
+    for (const auto &item : items) {
         if (remainingCapacity >= item.weight) {
             totalValue += item.value;
             remainingCapacity -= item.weight;
@@ -36,8 +36,8 @@ double fractionalKnapsack(int capacity, vector<Item>& items) {
 }
 
 int main() {
-    int capacity = 50;
-    vector<Item> items = {
+    int          capacity = 50;
+    vector<Item> items    = {
         {10, 60},
         {20, 100},
         {30, 120},

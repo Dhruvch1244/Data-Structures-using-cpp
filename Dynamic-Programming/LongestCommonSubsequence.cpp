@@ -1,10 +1,10 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
-int longestCommonSubsequence(const string& str1, const string& str2) {
+int longestCommonSubsequence(const string &str1, const string &str2) {
     int m = str1.length();
     int n = str2.length();
 
@@ -28,7 +28,8 @@ int main() {
     string str2 = "GXTXAYB";
 
     int lcs_length = longestCommonSubsequence(str1, str2);
-    cout << "Length of Longest Common Subsequence: " << lcs_length << endl;  // Output: 4
+    cout << "Length of Longest Common Subsequence: " << lcs_length
+         << endl; // Output: 4
 
     return 0;
 }

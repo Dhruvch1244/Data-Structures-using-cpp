@@ -3,27 +3,26 @@
 #include <vector>
 
 struct TreeNode {
-    int val;
-    std::vector<TreeNode*> children;
+    int                     val;
+    std::vector<TreeNode *> children;
 
     TreeNode(int value) : val(value) {}
 };
 
-
-void bfs(TreeNode* root) {
+void bfs(TreeNode *root) {
     if (root == nullptr)
         return;
 
-    std::queue<TreeNode*> q;
+    std::queue<TreeNode *> q;
     q.push(root);
 
     while (!q.empty()) {
-        TreeNode* current = q.front();
+        TreeNode *current = q.front();
         q.pop();
 
         std::cout << current->val << " ";
 
-        for (TreeNode* child : current->children) {
+        for (TreeNode *child : current->children) {
             q.push(child);
         }
     }
@@ -31,13 +30,13 @@ void bfs(TreeNode* root) {
 
 int main() {
 
-    TreeNode* root = new TreeNode(1);
-    TreeNode* child1 = new TreeNode(2);
-    TreeNode* child2 = new TreeNode(3);
-    TreeNode* child3 = new TreeNode(4);
-    TreeNode* grandchild1 = new TreeNode(5);
-    TreeNode* grandchild2 = new TreeNode(6);
-    TreeNode* grandchild3 = new TreeNode(7);
+    TreeNode *root        = new TreeNode(1);
+    TreeNode *child1      = new TreeNode(2);
+    TreeNode *child2      = new TreeNode(3);
+    TreeNode *child3      = new TreeNode(4);
+    TreeNode *grandchild1 = new TreeNode(5);
+    TreeNode *grandchild2 = new TreeNode(6);
+    TreeNode *grandchild3 = new TreeNode(7);
 
     root->children.push_back(child1);
     root->children.push_back(child2);

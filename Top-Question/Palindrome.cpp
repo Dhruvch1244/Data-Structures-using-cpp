@@ -1,18 +1,18 @@
+#include <algorithm>
 #include <iostream>
 #include <string>
-#include <algorithm>
 
 using namespace std;
 
-bool isPalindrome(const string& str) {
+bool isPalindrome(const string &str) {
     string reversedStr = str;
     reverse(reversedStr.begin(), reversedStr.end());
     return str == reversedStr;
 }
 
 int main() {
-    string str = "radar";
-    bool palindrome = isPalindrome(str);
+    string str        = "radar";
+    bool   palindrome = isPalindrome(str);
     if (palindrome) {
         cout << "The string is a palindrome." << endl;
     } else {

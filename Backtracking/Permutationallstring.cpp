@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void permute(string str, int index, vector<bool>& used, string current) {
+void permute(string str, int index, vector<bool> &used, string current) {
     if (index == str.length()) {
         cout << current << endl;
         return;
@@ -20,9 +20,9 @@ void permute(string str, int index, vector<bool>& used, string current) {
 }
 
 void printPermutations(string str) {
-    int n = str.length();
-    vector<bool> used(n, false); 
-    
+    int          n = str.length();
+    vector<bool> used(n, false);
+
     permute(str, 0, used, "");
 }
 

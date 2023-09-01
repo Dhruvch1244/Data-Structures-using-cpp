@@ -4,8 +4,8 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-bool binarysearch(vector<int>arr,int target,int high,int low){
-    if(high>=low) {
+bool binarysearch(vector<int> arr, int target, int high, int low) {
+    if (high >= low) {
         int med = (low + high) / 2;
         if (target == arr[med]) {
             return true;
@@ -21,12 +21,12 @@ bool binarysearch(vector<int>arr,int target,int high,int low){
     }
     return false;
 }
-int main(){
-    vector<int>arr = {1,2,3,4,5,6};
-    int low = 0,high = arr.size()-1;
-    int med = (low+high)/2;
-    cout<<binarysearch(arr,3,high,low)<<endl;
-    cout<<binarysearch(arr,10,high,low)<<endl;
-    cout<<binarysearch(arr,1,high,low)<<endl;
+int main() {
+    vector<int> arr = {1, 2, 3, 4, 5, 6};
+    int         low = 0, high = arr.size() - 1;
+    int         med = (low + high) / 2;
+    cout << binarysearch(arr, 3, high, low) << endl;
+    cout << binarysearch(arr, 10, high, low) << endl;
+    cout << binarysearch(arr, 1, high, low) << endl;
     return 0;
 }

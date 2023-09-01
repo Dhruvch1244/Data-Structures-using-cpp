@@ -1,30 +1,26 @@
 #include <iostream>
 using namespace std;
 struct Node {
-    int data;
-    Node* next;
+    int   data;
+    Node *next;
 };
 
 struct LinkedList {
-    Node* head;
+    Node *head;
 
-    LinkedList() {
-        head = nullptr;
-    }
+    LinkedList() { head = nullptr; }
 
-    bool isEmpty() {
-        return head == nullptr;
-    }
+    bool isEmpty() { return head == nullptr; }
 
     void insertAtEnd(int data) {
-        Node* newNode = new Node;
+        Node *newNode = new Node;
         newNode->data = data;
         newNode->next = nullptr;
 
         if (isEmpty()) {
             head = newNode;
         } else {
-            Node* current = head;
+            Node *current = head;
             while (current->next != nullptr) {
                 current = current->next;
             }
@@ -39,21 +35,21 @@ struct LinkedList {
         }
 
         if (head->data == data) {
-            Node* temp = head;
-            head = head->next;
+            Node *temp = head;
+            head       = head->next;
             delete temp;
             return;
         }
 
-        Node* current = head;
-        Node* prev = nullptr;
+        Node *current = head;
+        Node *prev    = nullptr;
         while (current != nullptr) {
             if (current->data == data) {
                 prev->next = current->next;
                 delete current;
                 return;
             }
-            prev = current;
+            prev    = current;
             current = current->next;
         }
 
@@ -66,7 +62,7 @@ struct LinkedList {
             return;
         }
 
-        Node* current = head;
+        Node *current = head;
         while (current != nullptr) {
             cout << current->data << " ";
             current = current->next;
@@ -82,11 +78,11 @@ int main() {
     linkedList.insertAtEnd(20);
     linkedList.insertAtEnd(30);
 
-    linkedList.display();  
+    linkedList.display();
 
     linkedList.remove(20);
 
-    linkedList.display();  
+    linkedList.display();
 
     return 0;
 }

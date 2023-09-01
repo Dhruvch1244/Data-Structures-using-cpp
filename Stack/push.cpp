@@ -3,22 +3,16 @@
 using namespace std;
 
 class Stack {
-private:
-    int top;                  
-    int arr[MAX_SIZE];       
+  private:
+    int top;
+    int arr[MAX_SIZE];
 
-public:
-    Stack() {
-        top = -1;             
-    }
+  public:
+    Stack() { top = -1; }
 
-    bool isFull() {
-        return top == MAX_SIZE - 1;  
-    }
+    bool isFull() { return top == MAX_SIZE - 1; }
 
-    bool isEmpty() {
-        return top == -1;     
-    }
+    bool isEmpty() { return top == -1; }
 
     void push(int element) {
         if (isFull()) {
@@ -26,8 +20,8 @@ public:
             return;
         }
 
-        top++;                 
-        arr[top] = element;    
+        top++;
+        arr[top] = element;
         cout << "Pushed " << element << " to the stack." << endl;
     }
 };
@@ -35,9 +29,9 @@ public:
 int main() {
     Stack stack;
 
-    stack.push(10);     
-    stack.push(20);     
-    stack.push(30);     
+    stack.push(10);
+    stack.push(20);
+    stack.push(30);
 
     return 0;
 }
