@@ -1,5 +1,5 @@
-#include <iostream>
 #include <algorithm>
+#include <iostream>
 #include <vector>
 
 using namespace std;
@@ -12,7 +12,7 @@ int main() {
     pop_heap(numbers.begin(), numbers.end());
     numbers.pop_back();
 
-    for (const auto& num : numbers) {
+    for (const auto &num : numbers) {
         cout << num << " ";
     }
 

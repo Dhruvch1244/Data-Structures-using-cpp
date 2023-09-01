@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool subsetSumUtil(vector<int>& nums, int target, int index, int currentSum) {
+bool subsetSumUtil(vector<int> &nums, int target, int index, int currentSum) {
 
     if (currentSum == target) {
         return true;
@@ -13,23 +13,20 @@ bool subsetSumUtil(vector<int>& nums, int target, int index, int currentSum) {
         return false;
     }
 
-
-    bool include = subsetSumUtil(nums, target, index + 1, currentSum + nums[index]);
-
+    bool include =
+        subsetSumUtil(nums, target, index + 1, currentSum + nums[index]);
 
     if (include) {
         return true;
     }
 
-
     bool exclude = subsetSumUtil(nums, target, index + 1, currentSum);
-
 
     return exclude;
 }
 
-bool subsetSum(vector<int>& nums, int target) {
-    
+bool subsetSum(vector<int> &nums, int target) {
+
     return subsetSumUtil(nums, target, 0, 0);
 }
 

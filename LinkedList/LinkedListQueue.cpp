@@ -1,34 +1,32 @@
 #include <iostream>
 using namespace std;
 struct Node {
-    int data;
-    Node* next;
+    int   data;
+    Node *next;
 };
 
 struct Queue {
-    Node* front;
-    Node* rear;
+    Node *front;
+    Node *rear;
 
     Queue() {
         front = nullptr;
-        rear = nullptr;
+        rear  = nullptr;
     }
 
-    bool isEmpty() {
-        return front == nullptr;
-    }
+    bool isEmpty() { return front == nullptr; }
 
     void enqueue(int data) {
-        Node* newNode = new Node;
+        Node *newNode = new Node;
         newNode->data = data;
         newNode->next = nullptr;
 
         if (isEmpty()) {
             front = newNode;
-            rear = newNode;
+            rear  = newNode;
         } else {
             rear->next = newNode;
-            rear = newNode;
+            rear       = newNode;
         }
 
         cout << "Enqueued element: " << data << endl;
@@ -40,8 +38,8 @@ struct Queue {
             return;
         }
 
-        Node* temp = front;
-        front = front->next;
+        Node *temp = front;
+        front      = front->next;
 
         if (front == nullptr) {
             rear = nullptr;
@@ -65,7 +63,7 @@ struct Queue {
             return;
         }
 
-        Node* current = front;
+        Node *current = front;
         cout << "Queue elements: ";
         while (current != nullptr) {
             cout << current->data << " ";
@@ -81,11 +79,11 @@ int main() {
     queue.enqueue(10);
     queue.enqueue(20);
     queue.enqueue(30);
-    queue.display();  
+    queue.display();
 
     queue.dequeue();
-    queue.display();  
+    queue.display();
 
-    cout << "Front element: " << queue.peek() << endl;  
+    cout << "Front element: " << queue.peek() << endl;
     return 0;
 }

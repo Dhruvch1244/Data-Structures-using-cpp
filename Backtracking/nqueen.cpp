@@ -3,7 +3,7 @@
 
 using namespace std;
 
-bool isSafe(vector<vector<int>>& board, int row, int col, int N) {
+bool isSafe(vector<vector<int>> &board, int row, int col, int N) {
 
     for (int i = 0; i < row; i++) {
         if (board[i][col] == 1) {
@@ -26,7 +26,7 @@ bool isSafe(vector<vector<int>>& board, int row, int col, int N) {
     return true;
 }
 
-bool solveNQueensUtil(vector<vector<int>>& board, int row, int N) {
+bool solveNQueensUtil(vector<vector<int>> &board, int row, int N) {
 
     if (row == N) {
 
@@ -46,9 +46,7 @@ bool solveNQueensUtil(vector<vector<int>>& board, int row, int N) {
 
             board[row][col] = 1;
 
-
             res = solveNQueensUtil(board, row + 1, N) || res;
-
 
             board[row][col] = 0;
         }

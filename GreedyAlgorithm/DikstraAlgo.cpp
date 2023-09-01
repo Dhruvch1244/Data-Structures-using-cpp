@@ -1,7 +1,7 @@
 #include <iostream>
-#include <vector>
-#include <queue>
 #include <limits>
+#include <queue>
+#include <vector>
 using namespace std;
 
 #define INF numeric_limits<int>::max()
@@ -11,20 +11,23 @@ struct Edge {
     int weight;
 };
 
-void dijkstraShortestPath(int source, const vector<vector<Edge>>& graph, vector<int>& distances) {
+void dijkstraShortestPath(int source, const vector<vector<Edge>> &graph,
+                          vector<int> &distances) {
     int numVertices = graph.size();
     distances.resize(numVertices, INF);
     distances[source] = 0;
 
-    priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>> pq;
+    priority_queue<pair<int, int>, vector<pair<int, int>>,
+                   greater<pair<int, int>>>
+        pq;
     pq.push(make_pair(0, source));
 
     while (!pq.empty()) {
         int u = pq.top().second;
         pq.pop();
 
-        for (const Edge& edge : graph[u]) {
-            int v = edge.destination;
+        for (const Edge &edge : graph[u]) {
+            int v      = edge.destination;
             int weight = edge.weight;
 
             if (distances[u] != INF && distances[u] + weight < distances[v]) {
@@ -36,7 +39,7 @@ void dijkstraShortestPath(int source, const vector<vector<Edge>>& graph, vector<
 }
 
 int main() {
-    int numVertices = 6;
+    int                  numVertices = 6;
     vector<vector<Edge>> graph(numVertices);
 
     // Add edges to the graph
@@ -50,7 +53,7 @@ int main() {
     graph[3].push_back({5, 6});
     graph[4].push_back({5, 1});
 
-    int source = 0;
+    int         source = 0;
     vector<int> distances;
 
     dijkstraShortestPath(source, graph, distances);

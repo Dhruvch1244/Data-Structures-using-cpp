@@ -18,13 +18,13 @@ int fibonacci(int n) {
 
 int main() {
     int n = 10;
-    cout << fibonacci(n) << endl;  // Output: 55
+    cout << fibonacci(n) << endl; // Output: 55
 
     n = 20;
-    cout << fibonacci(n) << endl;  // Output: 6765
+    cout << fibonacci(n) << endl; // Output: 6765
 
     n = 30;
-    cout << fibonacci(n) << endl;  // Output: 832040
+    cout << fibonacci(n) << endl; // Output: 832040
 
     return 0;
 }

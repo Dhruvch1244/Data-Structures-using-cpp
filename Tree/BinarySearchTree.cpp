@@ -3,13 +3,13 @@
 using namespace std;
 
 struct Node {
-    int data;
-    Node* left;
-    Node* right;
+    int   data;
+    Node *left;
+    Node *right;
 };
 
-Node* createNode(int data) {
-    Node* newNode = new Node();
+Node *createNode(int data) {
+    Node *newNode = new Node();
     if (!newNode) {
         cout << "Memory allocation failed!" << endl;
         return nullptr;
@@ -19,22 +19,21 @@ Node* createNode(int data) {
     return newNode;
 }
 
-Node* insertNode(Node* root, int data) {
+Node *insertNode(Node *root, int data) {
     if (root == nullptr) {
         return createNode(data);
     }
 
     if (data < root->data) {
         root->left = insertNode(root->left, data);
-    }
-    else {
+    } else {
         root->right = insertNode(root->right, data);
     }
 
     return root;
 }
 
-void inOrderTraversal(Node* root) {
+void inOrderTraversal(Node *root) {
     if (root) {
         inOrderTraversal(root->left);
         cout << root->data << " ";
@@ -43,7 +42,7 @@ void inOrderTraversal(Node* root) {
 }
 
 int main() {
-    Node* root = nullptr;
+    Node *root = nullptr;
 
     root = insertNode(root, 50);
     root = insertNode(root, 30);
