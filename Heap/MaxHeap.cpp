@@ -45,6 +45,13 @@ void MaxHeap::printHeap() {
     cout << endl;
 }
 
+int MaxHeap::getTop() {
+    if (getSize())
+        return data[1];
+    else
+        return INT_MIN;
+}
+
 #ifdef MAIN_HEAP
 
 int main() {

@@ -1,10 +1,12 @@
 #pragma once
 #include <iostream>
 #include <vector>
+#include <climits>
 
 using namespace std;
 
 class MaxHeap {
+    public:
     // valid index are from 1 to n
     //  data[0] is -1, an invalid node
     vector<int> data;
@@ -22,4 +24,6 @@ class MaxHeap {
     void buildMaxHeap();
 
     void printHeap();
+
+    int getTop();
 };
